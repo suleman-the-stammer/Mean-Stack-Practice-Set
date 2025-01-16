@@ -1,0 +1,12 @@
+<app-user [data]="user"></app-user>
+<app-user (send)="handleData($event)"></app-user>
+
+<form action="">
+ 
+  <input type="text"  [(ngModel)]="user.name" name="user.name" >
+  <input type="text"  [(ngModel)]="user.rollno"  name="user.rollno">
+  <button (click)="onSubmit()">submit</button>
+</form>
+
+<p>{{receivedData | json}}</p>
+<router-outlet></router-outlet>
